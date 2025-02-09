@@ -1,0 +1,129 @@
+:root {
+    --slider-width: 3em;
+    /* Default width of the slider */
+    --slider-height: 1.5em;
+    /* Default height of the slider */
+    --knob-size: 1.1em;
+    /* Default size of the knob */
+}
+
+
+.settingsBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.fontSelector {
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    cursor: pointer;
+    width: auto;
+    outline: none;
+    appearance: none;
+    /* Remove default styling in some browsers */
+    -webkit-appearance: none;
+    /* Remove default styling in Safari */
+    -moz-appearance: none;
+    /* Remove default styling in Firefox */
+    outline: none;
+    /* Remove outline */
+    /* Dynamic width */
+}
+
+.fontSelector option {
+    color: var(--text-color);
+    border: none;
+    background-color: var(--background-color);
+}
+
+.dividerIcon {
+    background-color: var(--placeholder-color);
+    width: 2px;
+    height: 20%;
+    border-radius: 20px;
+}
+
+/* For light mode */
+:root[data-theme='light'] .moonIcon {
+    stroke: var(--placeholder-color);
+    fill: rgb(255, 255, 255);
+    scale: 1.2;
+}
+
+/* For dark mode */
+:root[data-theme='dark'] .moonIcon {
+    stroke: purple;
+    /* Add other styles as needed */
+}
+
+.settingsRightWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    width: 40%;
+    height: 100%;
+
+}
+
+
+.settingsLabel {
+    position: relative;
+    display: inline-block;
+    width: var(--slider-width);
+    height: var(--slider-height);
+}
+
+.settingsCheckbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.roundSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: calc(var(--slider-height) / 2);
+}
+
+.roundSlider::before {
+    position: absolute;
+    content: '';
+    height: var(--knob-size);
+    width: var(--knob-size);
+    left: calc((var(--slider-height) - var(--knob-size)) / 2);
+    bottom: calc((var(--slider-height) - var(--knob-size)) / 2);
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.settingsCheckbox:checked+.roundSlider {
+    background-color: var(--primary-color);
+}
+
+.settingsCheckbox:checked+.roundSlider::before {
+    transform: translateX(calc(var(--slider-width) - var(--knob-size) - (var(--slider-height) - var(--knob-size))));
+}
+
+@media screen and (max-width: 768px) {
+
+    .settingsRightWrapper {
+        width: 85%;
+    }
+
+}

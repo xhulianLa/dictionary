@@ -1,0 +1,22 @@
+.listen_button {
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border-style: none;
+    aspect-ratio: 1;
+    width: 4vmax;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: white;
+    width: 50%;
+    height: 50%;
+}
+
+.listen_button:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}

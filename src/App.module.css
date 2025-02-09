@@ -1,0 +1,75 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.App_Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  height: 70%;
+  margin-bottom: 10vh;
+}
+
+
+.App_Wrapper>form {
+  margin-bottom: 20vh;
+}
+
+/* Large screens */
+@media screen and (min-width: 1201px) {
+  .App_Wrapper {
+    width: 40%;
+  }
+}
+
+/* Desktops */
+@media screen and (max-width: 1200px) {
+  .App_Wrapper {
+    width: 50%;
+  }
+}
+
+/* Small laptops */
+@media screen and (max-width: 1024px) {
+  .App_Wrapper {
+    width: 60%;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .App_Wrapper {
+    width: 75%;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  .App_Wrapper {
+    width: 85%;
+  }
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}

@@ -1,0 +1,21 @@
+.not_found_panel {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: red solid 1px; */
+    gap: 5em;
+}
+
+.not_found_panel>p {
+    color: var(--text-color);
+    font-size: 1.7em;
+    font-family: var(--font);
+}
+
+.question_mark {
+    fill: var(--placeholder-color);
+    scale: 4;
+}

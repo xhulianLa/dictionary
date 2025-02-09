@@ -1,10 +1,82 @@
+:root[data-theme='light'] {
+  --background-color: #ffffff;
+  --text-color: #262626;
+  --primary-color: #9D49F2;
+  --secondary-color: #E0CEF2;
+  --link-color: #9959D9;
+  --button-bg: #767676;
+  --border-color: #e5e5e5;
+  --card-background: #f9f9f9;
+  --input-background: #f4f4f4;
+  --placeholder-color: #cccccc;
+  --icon-color: #000000;
+  --input-border-radius: 1.5em;
+}
+
+:root[data-theme="dark"] {
+  --background-color: #050505;
+  --text-color: #ffffff;
+  --primary-color: #a445ed;
+  --secondary-color: #2f143d;
+  --link-color: #694582;
+  --button-bg: rgba(255, 255, 255, 0.1);
+  --border-color: #333333;
+  --card-background: #1e1e1e;
+  --input-background: #1a1a1a;
+  --placeholder-color: #888888;
+  --icon-color: #ffffff;
+  --input-border-radius: 1.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #050505;
+    --text-color: #ffffff;
+    --primary-color: #a445ed;
+    --secondary-color: #2f143d;
+    --link-color: #694582;
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --border-color: #333333;
+    --card-background: #1e1e1e;
+    --input-background: #1a1a1a;
+    --placeholder-color: #888888;
+    --icon-color: #ffffff;
+    --input-border-radius: 1.5em;
+  }
+}
+
+:root {
+  --font: "serif";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+
+}
+
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--background-color);
 }
 
 code {
